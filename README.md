@@ -15,7 +15,7 @@
     image: ghcr.io/blue-oci/postgres:16
     restart: unless-stopped
     volumes:
-      - postgres:/var/lib/postgresql/data:Z
+      - ./postgres:/var/lib/postgresql/data:Z
     environment:
       - POSTGRES_USER=postgres_user
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
