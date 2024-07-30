@@ -1,6 +1,6 @@
 # Postgres
 
-![Build, scan & push](https://github.com/Blue-OCI/postgres/actions/workflows/build.yml/badge.svg)
+![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build.yml/badge.svg)
 
 ### Features & usage
 - Built on the [Docker Community's Alpine-based image](https://github.com/docker-library/postgres), to be used as a drop-in replacement.

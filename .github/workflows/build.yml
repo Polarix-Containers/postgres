@@ -14,7 +14,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: blue-oci/postgres
+  IMAGE_NAME: polarix-containers/postgres
 
 jobs:
   build:
