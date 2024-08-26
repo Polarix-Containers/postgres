@@ -36,4 +36,4 @@
 ### Licensing
 - The code in this repository is licensed under the Apache License. 😇
 - The image is built on `docker.io/postgres`, which is under the MIT license. Copyright to the base image belongs to Docker PostgreSQL Authors.
-- Any image built by Blue OCI is provided under the combination of license terms resulting from the use of individual packages.
+- Any image built by Polarix Containers is provided under the combination of license terms resulting from the use of individual packages.
