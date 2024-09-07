@@ -17,7 +17,7 @@
     volumes:
       - ./postgres:/var/lib/postgresql/data:Z
     environment:
-      - POSTGRES_USER=postgres_user
+      - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres_user"]
