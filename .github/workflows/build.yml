@@ -10,7 +10,7 @@ on:
       - '**.md'
   schedule:
     # Build the image daily
-    - cron: '0 1 * * *'
+    - cron: '15 0 * * *'
 
 env:
   REGISTRY: ghcr.io
