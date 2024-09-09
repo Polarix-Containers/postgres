@@ -1,13 +1,13 @@
-name: Build
+name: Build 16
 
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-    # Ignore Markdown files
-    paths-ignore:
-      - '**.md'
+    paths:
+      - '.github/workflows/build-14.yml'
+      - '14/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
@@ -15,7 +15,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/postgres
-  TAG: latest
+  TAG: 14
 
 jobs:
   build:
@@ -29,10 +29,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Extract version for tags
-        run: |
-          echo "FULL_VERSION=$(grep -oP '(?<=VERSION=).*' Dockerfile)" >> $GITHUB_ENV
 
       # Add support for more platforms with QEMU
       - name: Set up QEMU
@@ -56,13 +52,12 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             ${{ env.TAG }}
-            ${{ env.FULL_VERSION }}
 
       - name: Build and push Docker image
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
@@ -90,7 +85,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
-          category: trivy
+          category: trivy-${{ env.TAG }}
 
   grype:
     name: Scan current image with Grype
@@ -111,4 +106,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.grype.outputs.sarif }}
-          category: grype
+          category: grype-${{ env.TAG }}
