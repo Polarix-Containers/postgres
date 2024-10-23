@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/build-16.yml'
+      - '.github/workflows/build-17.yml'
       - '17/**'
   schedule:
     # Build the image daily
