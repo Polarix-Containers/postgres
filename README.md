@@ -1,5 +1,6 @@
 # Postgres
 
+![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-17.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-16.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-15.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-14.yml/badge.svg)

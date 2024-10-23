@@ -1,4 +1,4 @@
-name: Build 16
+name: Build 17
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
       - main
     paths:
       - '.github/workflows/build-16.yml'
-      - '16/**'
+      - '17/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
@@ -15,7 +15,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/postgres
-  TAG: 16
+  TAG: 17
 
 jobs:
   build:
@@ -52,6 +52,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             ${{ env.TAG }}
+            latest
 
       - name: Build and push Docker image
         id: build-and-push
