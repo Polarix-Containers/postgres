@@ -17,7 +17,7 @@
 ```
   postgres:
     container_name: postgres
-    image: ghcr.io/blue-oci/postgres:16
+    image: ghcr.io/polarix-containers/postgres:17
     restart: unless-stopped
     volumes:
       - ./postgres:/var/lib/postgresql/data:Z
