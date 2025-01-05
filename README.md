@@ -27,10 +27,10 @@
       test: ["CMD", "pg_isready", "-U", "postgres_user"]
       interval: 15s
       timeout: 5s
-    user: "70:70"
+    user: "200012:200012"
     read_only: true
     tmpfs:
-      - /var/run/postgresql:size=50M,mode=0770,uid=70,gid=70,noexec,nosuid,nodev
+      - /var/run/postgresql:size=50M,mode=0770,uid=200012,gid=200012,noexec,nosuid,nodev
     security_opt:
       - "no-new-privileges=true"
     cap_drop:
