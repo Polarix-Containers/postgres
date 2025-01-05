@@ -10,7 +10,7 @@ LABEL maintainer="Thien Tran contact@tommytran.io"
 
 RUN apk -U upgrade \
     && apk add libstdc++ shadow \
-    && rm /usr/local/bin/gosu /usr/local/bin/su-exec
+    && rm /usr/local/bin/gosu
 
 RUN --network=none \
     usermod -u ${UID} postgres \
