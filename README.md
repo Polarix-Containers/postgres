@@ -37,6 +37,8 @@
       - ALL
 ```
 
+Note: replace `postgres_user` with your actual postgres username.
+
 ### Licensing
 - The code in this repository is licensed under the Apache license. 😇
 - The image is built on `docker.io/postgres`, which is under the MIT license. Copyright to the base image belongs to Docker PostgreSQL Authors.
