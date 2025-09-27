@@ -16,10 +16,10 @@
 ```
   postgres:
     container_name: postgres
-    image: ghcr.io/polarix-containers/postgres:17
+    image: ghcr.io/polarix-containers/postgres:18
     restart: unless-stopped
     volumes:
-      - ./postgres:/var/lib/postgresql/data:Z
+      - ./postgres:/var/lib/postgresql/18/docker:Z
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
