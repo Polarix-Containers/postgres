@@ -1,10 +1,10 @@
 # Postgres
 
+![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-18.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-17.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-16.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-15.yml/badge.svg)
 ![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-14.yml/badge.svg)
-![Build, scan & push](https://github.com/Polarix-Containers/postgres/actions/workflows/build-13.yml/badge.svg)
 
 ### Features & usage
 - Built on the [Docker Community's Alpine-based image](https://github.com/docker-library/postgres), to be used as a drop-in replacement.
